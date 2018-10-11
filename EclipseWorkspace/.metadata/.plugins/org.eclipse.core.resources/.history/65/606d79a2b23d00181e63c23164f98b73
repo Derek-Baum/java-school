@@ -1,0 +1,9 @@
+package cisc181.lab_7;
+
+import java.awt.Component;
+
+public interface I {
+	
+	public <T> void myMethod(T thing);
+
+}

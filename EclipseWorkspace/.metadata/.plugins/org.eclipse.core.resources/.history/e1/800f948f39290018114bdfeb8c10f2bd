@@ -1,0 +1,28 @@
+package cisc181.lab_5;
+
+public abstract class Berry {
+	
+	private String color;
+	private double grams;
+	
+	// default constructor
+	public Berry(){
+		this("black", 1);
+	}
+	// constructor
+	public Berry(String color, double grams){
+		this.color = color;
+		this.grams = grams;
+	}
+	public String getColor() {
+		return color;
+	}
+	public double getGrams() {
+		return grams;
+	}
+	public abstract String harvestBerry();
+	public boolean equals(Berry b){
+		return grams == b.getGrams() && color.equals(b.getColor());
+	}
+	
+}

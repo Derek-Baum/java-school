@@ -1,0 +1,22 @@
+package cisc181.lab_5;
+
+public class Blueberry extends Berry implements Edible{
+
+	public Blueberry(){
+		this(1);
+	}
+	public Blueberry(double grams){
+		super("blue", grams);
+	}
+	@Override
+	public double getCalories() {
+		// TODO Auto-generated method stub
+		return 0.57 * getGrams();
+	}
+	@Override
+	public String harvestBerry() {
+		return "Picking";
+	}
+	
+	
+}

@@ -1,0 +1,19 @@
+package cisc181.lab_5;
+
+public class StrawberryShortcake implements Edible{
+
+	
+	public StrawberryShortcake(){
+		
+	}
+	@Override
+	public double getCalories() {
+		// TODO Auto-generated method stub
+		return 300;
+	}
+	public String toString(){
+		return "Strawberry Shortcake";
+	}
+	
+
+}

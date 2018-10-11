@@ -1,0 +1,17 @@
+package cisc181.lab_5;
+
+public class Winterberry extends Berry{
+
+	
+	public Winterberry(){
+		super("red",0.117);
+	}
+	
+	@Override
+	public String harvestBerry() {
+		return "Branch Cutting";
+	}
+	
+	
+
+}

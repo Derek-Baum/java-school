@@ -1,0 +1,27 @@
+package cisc181.lab_7;
+
+import java.awt.Component;
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class tester{
+	
+	public static void main(String[] args){
+		List<Integer> test1 = new ArrayList<Integer>();
+		test1.add(5);
+		test1.add(6);
+		test1.add(7);
+		
+		Mapper(test1, i -> i * 2);
+	}
+	
+	public static <T> void Mapper(List<T> list, I myMethodsInterface) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException{
+		for(int i = 0; i < list.size();i++){
+			list.set(i, myMethodsInterface.myMethod(new Component(list.get(i))));
+		}
+	}
+	
+	
+
+}

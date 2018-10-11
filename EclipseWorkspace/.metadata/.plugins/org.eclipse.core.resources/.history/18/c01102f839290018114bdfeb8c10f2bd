@@ -1,0 +1,26 @@
+package cisc181.lab_5;
+
+public class Cranberry extends Berry implements Edible {
+	
+	public Cranberry(){
+		this(1);
+	}
+	public Cranberry(double grams){
+		super("red",grams);
+	}
+
+	@Override
+	public double getCalories() {
+		// TODO Auto-generated method stub
+		return 0.46 * getGrams();
+	}
+
+	@Override
+	public String harvestBerry() {
+		return "Wet Harvesting";
+	}
+
+	public String toString(){
+		return "Cranberry";
+	}
+}

@@ -1,0 +1,75 @@
+package cisc181.lab_5;
+
+import java.util.Arrays;
+
+public class ArrayStaticMethods {
+	/**
+	 * 
+	 * @param data
+	 * @return
+	 */
+	public static double mean(double[] data){
+		double sum = 0;
+		for(double x : data)
+			sum += x;
+		return sum/data.length;
+	}
+	/**
+	 * 
+	 * @param data
+	 * @return
+	 */
+	public static int countM(char[] data){
+		int output = 0;
+		for(char c : data){
+			if(c == 'm' || c == 'M')
+				output++;
+		}
+		return output;
+	}
+	/**
+	 * 
+	 * @param values
+	 * @param value1
+	 * @param value2
+	 * @return
+	 */
+	public static int[] replace(int[] values, int value1, int value2){
+		int[] output = new int[values.length];
+		
+		for(int i = 0; i < values.length;i++){
+			if(values[i] == value1)
+				output[i] = value2;
+			output[i] = values[i];
+		}
+		
+		return output;
+	}
+	/**
+	 * 
+	 * @param data
+	 * @return
+	 */
+	public static int[] padZeros(int[] data){
+		int[] output = new int[data.length];
+		int count = 0;
+		for(int x : data)
+			if(x == 0)
+				count++;
+		int j = 0;
+		for(int i = 0;i < data.length;i++){
+			if(i < count){
+				output[i] = 0;
+			}else{
+				while(data[j] == 0){
+					j++;
+				}
+				output[i] = data[j];
+				j++;	
+			}
+		}
+		return output;
+		
+		
+	}
+}
